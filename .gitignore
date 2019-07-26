@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+Pipfile.lock
+
+/src/shortener/migrations/__pycache__/
