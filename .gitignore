@@ -106,3 +106,4 @@ venv.bak/
 Pipfile.lock
 
 /src/shortener/migrations/__pycache__/
+.idea
