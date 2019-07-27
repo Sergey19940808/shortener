@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 class RegisterView(FormView):
     form_class = UserCreationForm
 
-    success_url = '/auth/login/'
+    success_url = '/auth_custom/login/'
 
     template_name = 'register/register.html'
 

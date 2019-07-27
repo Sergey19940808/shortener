@@ -4,8 +4,6 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "==5.0.1"
-pytest-django = "==3.5.1"
 python-dotenv = "==0.10.3"
 
 [packages]

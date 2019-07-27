@@ -10,7 +10,8 @@ class Shortener(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
-        self.user = kwargs.pop('user')
+        if kwargs and kwargs.get('user'):
+            self.user = kwargs.pop('user')
         hash_link = sha256()
         hash_link.update(self.origin_link.encode('utf-8'))
         self.short_link = f'short/{hash_link.hexdigest()[:10]}'
