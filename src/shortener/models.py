@@ -2,6 +2,7 @@ from hashlib import sha256
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Shortener(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     origin_link = models.URLField(max_length=255, verbose_name='Оригинальная ссылка', unique=True)
