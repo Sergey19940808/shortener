@@ -26,8 +26,7 @@ dotenv.load_dotenv(dotenv_path=os.path.join(ROOT_DIR, '.env'), override=True)
 SECRET_KEY = os.environ.get('SECRET_KEY', 'rw_oo1(0$@ss4&gjr&)5v_3hhvz%$+r778ra665c#4+_d_bcy!')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -48,7 +47,7 @@ INSTALLED_APPS = [
 
     # My app
     'shortener',
-    'auth_custom',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -102,16 +101,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth_custom.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth_custom.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth_custom.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth_custom.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -143,7 +142,7 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/shortener/'
 
 BOOTSTRAP4 = {
-'include_jquery': True
+    'include_jquery': True
 }
 
 try:

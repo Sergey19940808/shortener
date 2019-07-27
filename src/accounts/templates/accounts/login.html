@@ -6,7 +6,7 @@
 {% block content %}
 
     <div class="container-form">
-        <form action="{% url "login" %}" method="post" class="form">
+        <form action="{% url "login_custom" %}" method="post" class="form">
           {% csrf_token %}
           {% bootstrap_form form %}
           {% buttons %}
@@ -14,7 +14,7 @@
               Войти
             </button>
           {% endbuttons %}
-          <a href="{% url 'register' %}">Если вы не зарегистрированны, нажмите сюда</a>
+          <a href="{% url 'register_custom' %}">Если вы не зарегистрированны, нажмите сюда</a>
         </form>
     </div>
 
