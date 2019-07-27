@@ -21,3 +21,8 @@
 .alert {
     width: 200px;
 }
+.container-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px 0 0;
+}
