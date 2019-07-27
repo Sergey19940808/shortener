@@ -16,7 +16,8 @@ class Shortener(models.Model):
         hash_link = sha256()
         hash_link.update(self.origin_link.encode('utf-8'))
         self.short_link = f'short/{hash_link.hexdigest()[:10]}'
-        return super(Shortener, self).save(*args, **kwargs)
+        super(Shortener, self).save(*args, **kwargs)
+        return self
 
     def __str__(self):
         return f'{self.origin_link}'

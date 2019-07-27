@@ -15,16 +15,21 @@ class ShortenerView(LoginRequiredMixin, ListView):
 
     def get(self, request, *args, **kwargs):
         form = ShortenerForm()
-        context = self.service_class.get_context(request, form)
+        if request.session.get('short_link'):
+            context = self.service_class.get_context(request, form, request.session.get('short_link'))
+            request.session.pop('short_link')
+        else:
+            context = self.service_class.get_context(request, form)
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwarg):
         form = ShortenerForm(request.POST)
-        context = self.service_class.get_context(request, form)
         if form.is_valid():
-            form.save_model(request.user)
+            short_link = form.save_model(request.user)
+            request.session['short_link'] = short_link.short_link
             return redirect('index')
         else:
+            context = self.service_class.get_context(request, form)
             return render(request, self.template_name, context)
 
 

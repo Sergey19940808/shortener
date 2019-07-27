@@ -11,12 +11,13 @@ class ShortenerService(object):
         page = request.GET.get('page')
         return paginator.get_page(page)
 
-    def get_context(self, request, form):
+    def get_context(self, request, form, short_link=''):
         shorteners = Shortener.objects.filter(user=request.user)
         context = {
             'title': 'Главная',
             'shorteners': self._get_page(shorteners, request),
             'form': form,
-            'count': len(shorteners)
+            'count': len(shorteners),
+            'short_link': short_link
         }
         return context

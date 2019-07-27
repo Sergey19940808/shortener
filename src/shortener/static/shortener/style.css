@@ -20,6 +20,9 @@
     justify-content: flex-end;
     margin: 20px 40px 0 0;
 }
+.container-short-link {
+    margin: 0 0 0 50px;
+}
 .head-title {
     text-align: center;
 }

@@ -11,7 +11,4 @@ class ShortenerForm(forms.ModelForm):
     def save_model(self, user):
         return self.instance.save(**{'user': user})
 
-    def validate_origin_link(self):
-        pass
-
 

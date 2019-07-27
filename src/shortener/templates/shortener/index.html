@@ -10,7 +10,7 @@
         <p class="space">Добро пожаловать, {{ user.username }}</p>
     </div>
     <div class="container-form-index">
-        <form action="" method="post" class="form form-c">
+        <form action="{% url 'index' %}" method="post" class="form form-c">
             {% csrf_token %}
             {% bootstrap_form form show_help=False layout='inline' %}
             {% buttons %}
@@ -20,6 +20,11 @@
             {% endbuttons %}
         </form>
     </div>
+    {% if short_link %}
+        <div class="container-short-link">
+            Ваша ссылка: {{ short_link }}
+        </div>
+    {% endif %}
     <div class="container-table">
         {% if count %}
             <table class="table table-dark">

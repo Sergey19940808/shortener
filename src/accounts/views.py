@@ -1,6 +1,7 @@
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.views import LogoutView,LoginView
+from django.contrib.auth.views import LogoutView, LoginView
+
 
 class RegisterView(FormView):
     form_class = UserCreationForm
@@ -14,8 +15,10 @@ class RegisterView(FormView):
 
         return super(RegisterView, self).form_valid(form)
 
+
 class LogoutViewCustom(LogoutView):
     template_name = 'accounts/logged_out.html'
+
 
 class LoginViewCustom(LoginView):
     template_name = 'accounts/login.html'
