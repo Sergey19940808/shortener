@@ -1,6 +1,23 @@
-.container-head {
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     margin: 30px;
+}
+.container-form {
+    display: flex;
+    justify-content: center;
+    margin: 160px 0 0 0;
 }
 .head-title {
     text-align: center;
+}
+.form-group {
+    width: 300px;
+}
+.space {
+    margin: 0 10px 0 0;
+}
+.alert {
+    width: 200px;
 }

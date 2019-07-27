@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # My app
     'shortener',
+    'register',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     'shortener',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+
+BOOTSTRAP4 = {
+'include_jquery': True
+}
 
 try:
     from .local_settings import *
