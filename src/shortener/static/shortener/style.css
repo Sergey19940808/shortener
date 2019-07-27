@@ -9,11 +9,28 @@
     justify-content: center;
     margin: 160px 0 0 0;
 }
+.container-form-index {
+    margin: 50px;
+}
+.container-table {
+    margin: 50px;
+}
+.container-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px 0 0;
+}
 .head-title {
     text-align: center;
 }
 .form-group {
     width: 300px;
+}
+.form-c {
+    display: flex;
+}
+.form-button {
+    margin: 0 0 0 15px;
 }
 .space {
     margin: 0 10px 0 0;
@@ -21,8 +38,6 @@
 .alert {
     width: 200px;
 }
-.container-right {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 40px 0 0;
+.pagination {
+    margin: 20px 0 0 25px;
 }
