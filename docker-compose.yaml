@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     container_name: app
-    command: bash -c "python3.6 src/manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python3.6 src/manage.py migrate && python3.6 src/manage.py runserver 0.0.0.0:8000"
     build: .
     ports:
       - 8000:8000
