@@ -40,7 +40,9 @@
                     {% for shortener in shorteners %}
                         <tr>
                             <td>
-                                <a href="{{ shortener.origin_link }}">
+                                <a href="{{ shortener.origin_link }}"
+                                   class="link_table-origin"
+                                >
                                     {{ shortener.origin_link }}
                                 </a>
                             </td>
