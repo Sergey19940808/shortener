@@ -1,5 +1,7 @@
-/postgres-data/
-/src/shortener/migrations/__pycache__/
-/src/core/local_settings.py
+/shortener/migrations/__pycache__/
+/core/local_settings.py
+/core/__pycache__/
+/accounts/__pycache__/
+/shortener/__pycache__/
 .idea
 /venv/
