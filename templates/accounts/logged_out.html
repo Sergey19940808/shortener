@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Выйти{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <p class="space">Вы вышли!</p>
+        <a href="{% url 'login_custom'%}">Кликните чтобы войти снова</a>
+    </div>
+{% endblock %}

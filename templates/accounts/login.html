@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load bootstrap4 %}
+{% bootstrap_javascript %}
+
+{% block title %}Войти{% endblock title %}
+
+{% block content %}
+
+    <div class="container-form">
+        <form action="{% url "login_custom" %}" method="post" class="form">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          {% buttons %}
+            <button type="submit" class="btn btn-primary">
+              Войти
+            </button>
+          {% endbuttons %}
+          <a href="{% url 'register_custom' %}">Если вы не зарегистрированны, нажмите сюда</a>
+        </form>
+    </div>
+
+{% endblock %}
