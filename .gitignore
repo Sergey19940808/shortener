@@ -1,7 +1,0 @@
-Pipfile.lock
-
-/postgres-data/
-/src/shortener/migrations/__pycache__/
-/src/core/local_settings.py
-.idea
-.env
